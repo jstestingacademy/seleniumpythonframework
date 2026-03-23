@@ -1,11 +1,16 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+import tests.login_steps
+
+from utlities import config
+
 
 @pytest.fixture
 def setup():
-    driver = webdriver.Chrome()
-    driver.get("https://opensource-demo.orangehrmlive.com/")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.maximize_window()
-    driver.implicitly_wait(10)
+    driver.get(config.baseurl)
     yield driver
     driver.quit()

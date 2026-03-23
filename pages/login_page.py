@@ -8,10 +8,13 @@ class LoginPage(BasePage):
     Password= (By.NAME, "password")
     login_btn= (By.XPATH, "//button[@type='submit']")
 
-    def login(self, username, password):
+    def enter_username(self, username):
         self.enter_Text(self.UserName, username)
 
+    def enter_password(self, password):
         self.enter_Text(self.Password, password)
+
+    def click_login(self):
         self.click_Button(self.login_btn)
 
 

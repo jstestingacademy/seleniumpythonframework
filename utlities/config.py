@@ -1,5 +1,5 @@
-basurl= "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+baseurl= "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 browser= "chrome"
-timeout =10
+timeout =20
 username = "Admin"
 password = "admin123"
